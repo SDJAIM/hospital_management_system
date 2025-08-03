@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <!-- Billing Login Form View -->
+        <record id="view_billing_login_form" model="ir.ui.view">
+            <field name="name">billing.login.form</field>
+            <field name="model">billing.login</field>
+            <field name="arch" type="xml">
+                <form string="Billing Login">
+                    <sheet>
+                        <group>
+                            <field name="email"/>
+                            <field name="password"/>
+                        </group>
+                        <footer>
+                            <button name="action_redirect_billing" type="object" string="Login" class="btn-primary"/>
+                            <button string="Cancel" class="btn-secondary" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action for the login form -->
+        <record id="action_billing_login" model="ir.actions.act_window">
+            <field name="name">Medical Login</field>
+            <field name="res_model">billing.login</field>
+            <field name="view_mode">form</field> <!-- keep form -->
+            <field name="view_id" ref="view_billing_login_form"/>
+            <field name="target">new</field> <!-- Open in a popup modal -->
+        </record>
+
+<!--        <record id="action_billing_login" model="ir.actions.act_window">-->
+<!--            <field name="name">Medical Billing</field>-->
+<!--            <field name="res_model">medical.bill</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="view_id" ref="hospital_management.view_medical_bill_form"/>-->
+<!--            <field name="target">current</field>-->
+<!--        </record>-->
+
+
+        <!-- Menu for Billing -->
+<!--        <menuitem id="billing" name="Medical Billing" sequence="50"/>-->
+<!--        <menuitem id="menu_billing_home" name="Billing" parent="billing" action="hospital_management.action_billing_login"/>-->
+    </data>
+</odoo>

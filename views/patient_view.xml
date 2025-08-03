@@ -1,0 +1,69 @@
+<odoo>
+    <!-- list View -->
+    <record id="view_patient_list" model="ir.ui.view">
+        <field name="name">hospital.patient.list</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <list>
+                
+                <field name="registration_date"/>
+                <field name="patient_id"/>
+                <field name="name" optional="show" />
+                <field name="gender" optional="show"/>
+                <field name="age" optional="show"/>
+                <field name="contact_number" optional="show"/>
+                <field name="blood_group" optional="show"/>
+                <field name="state_id" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+ <record id="hospital_patient_form" model="ir.ui.view">
+    <field name="name">hospital.patient.form</field>
+    <field name="model">hospital.patient</field>
+    <field name="key">hospital_patient_form</field> <!-- ✅ This is the missing part -->
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <field name="patient_id" readonly="1" />
+                    <field name="registration_date" readonly="1"/>
+                    <field name="name" placeholder="Enter the Name"/>
+                    <field name="date_of_birth" placeholder="Enter DOB (YYYY-MM-DD)" />
+                    <field name="age" readonly="1"/>
+                    <field name="gender"/>
+                    <field name="contact_number" required="1" placeholder="Enter 10-digit mobile number"/>
+                    <field name="blood_group" placeholder="Select Blood group"/>
+                    <field name="martial_statu"/>
+                    <field name="state_id"/>
+                    <field name="address" placeholder="Address"/>
+                    <field name="case_description" placeholder="Mention your Disease"/>
+                </group>
+
+                <div class="oe_button_box" name="buttons" style="margin-top: 20px; text-align: center;">
+                    <button name="action_save_patient"
+                            type="object"
+                            string="Save"
+                            class="btn-primary"
+                            style="margin-right: 10px; padding: 10px 20px; font-size: 20px;"/>
+                </div>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+
+    <!-- Action with Grouping -->
+    <record id="action_patient" model="ir.actions.act_window">
+        <field name="name">Registration</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p>Click to add a new patient.</p>
+        </field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="registration_menu" name="Registration" parent="reception" action="action_patient" sequence="1"/>
+</odoo>

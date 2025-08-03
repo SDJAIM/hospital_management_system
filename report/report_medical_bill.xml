@@ -1,0 +1,109 @@
+<odoo>
+    <!-- QWeb Report Template for Medical Bill -->
+    <template id="medical_receipt_template">
+        <t t-call="web.external_layout">
+            <div class="page" style="font-family: 'Arial', sans-serif;">
+
+                <!-- HEADER -->
+                <div style="border-bottom: 3px solid #003366; padding-bottom: 10px; margin-bottom: 20px;">
+                    <h2 style="color: #003366;">MEDICAL BILLING INVOICE</h2>
+                </div>
+
+                <!-- PATIENT INFO -->
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <div>
+                        <h4 style="color:#003366; margin: 0;">PATIENT INFORMATION</h4>
+                        <p style="margin: 0; font-size: 18px; font-weight: bold;">
+                            Patient Name: <t t-esc="doc.patient_name"/>
+                        </p>
+                        <div style="margin-top: 8px;">
+                            <table style="border-collapse: collapse;">
+                                <tr><td style="padding-right: 20px;">Age:</td><td><t t-esc="doc.patient_age"/></td></tr>
+                                <tr><td style="padding-right: 20px;">Gender:</td><td><t t-esc="doc.patient_gender"/></td></tr>
+                                <tr><td style="padding-right: 20px;">Bill ID:</td><td><t t-esc="doc.id"/></td></tr>
+                                <tr><td style="padding-right: 20px;">Date:</td><td><t t-esc="doc.date"/></td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div style="text-align: right;">
+                        <h4 style="color:#003366; margin: 0;">Amount Due</h4>
+                        <h2 style="margin: 0;">₹ <t t-esc="doc.total_amount"/></h2>
+                    </div>
+                </div>
+
+                <!-- TABLE WITH FULL DETAILS -->
+                <table class="table table-sm" style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+                    <thead style="background-color: #f2f2f2;">
+                        <tr>
+                            <th style="padding: 8px; border: 1px solid #ccc;">Item</th>
+                            <!--th style="padding: 8px; border: 1px solid #ccc;">Description</th-->
+                            <th style="padding: 8px; border: 1px solid #ccc;">Quantity</th>
+                            <th style="padding: 8px; border: 1px solid #ccc;">Unit Price</th>
+                            <th style="padding: 8px; border: 1px solid #ccc; text-align: right;">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="doc.line_ids" t-as="line">
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ccc;text-align: right;"><t t-esc="line.medicine_id.name"/></td>
+                                <!--td style="padding: 8px; border: 1px solid #ccc;">Medicine prescribed</td-->
+                                <td style="padding: 8px; border: 1px solid #ccc;text-align: center;"><t t-esc="line.quantity"/></td>
+                                <td style="padding: 8px; border: 1px solid #ccc;text-align: center;">₹ <t t-esc="line.cost"/></td>
+                                <td style="padding: 8px; border: 1px solid #ccc; text-align: right;">₹ <t t-esc="line.subtotal"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+
+                <!-- TOTALS -->
+                <div style="margin-top: 20px; text-align: right;">
+                    <p><strong>Subtotal:</strong> ₹ <t t-esc="doc.total_amount"/></p>
+                    <p><strong>Tax (0%):</strong> ₹ 0.00</p>
+                    <h3 style="color: #003366;">TOTAL: ₹ <t t-esc="doc.total_amount"/></h3>
+                </div>
+
+                <!-- FOOTER -->
+                <div style="margin-top: 30px; font-size: 12px;">
+                    <p><strong>Note:</strong> This is a computer-generated invoice. Please retain it for your records.</p>
+                    <p><strong>Your Hospital Name</strong> | www.yourhospital.com | Contact: 123-456-7890</p>
+                </div>
+
+                <!-- PRINT BUTTON (Web view only) -->
+                <t t-if="not report_type == 'qweb-pdf'">
+                    <div class="no-print" style="text-align: center; margin-top: 40px;">
+                        <button onclick="window.print()" style="
+                            padding: 10px 20px;
+                            background-color: #003366;
+                            color: white;
+                            border: none;
+                            font-size: 16px;
+                            border-radius: 5px;
+                            cursor: pointer;">
+                            🖨️ Print Receipt
+                        </button>
+                    </div>
+                </t>
+
+                <!-- Hide button on print -->
+                <style>
+                    @media print {
+                        .no-print {
+                            display: none !important;
+                        }
+                    }
+                </style>
+
+            </div>
+        </t>
+    </template>
+
+    <!-- Report Declaration -->
+    <report
+        id="action_report_medical_bill"
+        model="medical.bill"
+        string="Medical Bill"
+        report_type="qweb-pdf"
+        name="hospital_management_system.medical_receipt_template"
+        file="hospital_management_system.medical_receipt_template"
+        attachment_use="False"/>
+</odoo>

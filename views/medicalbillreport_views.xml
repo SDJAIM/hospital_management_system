@@ -1,0 +1,48 @@
+<odoo>
+    <!-- QWeb Report Template for Medical Bill -->
+    <template id="report_medical_bill">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <h2 style="text-align: center;">Medical Bill</h2>
+
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <p><strong>Patient Name:</strong> <t t-esc="doc.patient_id.name"/></p>
+                        <p><strong>Age:</strong> <t t-esc="doc.patient_id.age_display"/></p>
+                        <p><strong>Gender:</strong> <t t-esc="doc.patient_id.gender"/></p>
+                    </div>
+                    <div class="col-6" style="text-align: right;">
+                        <p><strong>Bill No:</strong> <t t-esc="doc.name"/></p>
+                        <p><strong>Date:</strong> <t t-esc="doc.date"/></p>
+                    </div>
+                </div>
+
+                <table class="table table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th style="width: 40%;">Medicine</th>
+                            <th style="text-align: right;">Cost</th>
+                            <th style="text-align: right;">Quantity</th>
+                            <th style="text-align: right;">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="doc.line_ids" t-as="line">
+                            <tr>
+                                <td><t t-esc="line.medicine_id.name"/></td>
+                                <td style="text-align: right;"><t t-esc="line.cost"/></td>
+                                <td style="text-align: right;"><t t-esc="line.quantity"/></td>
+                                <td style="text-align: right;"><t t-esc="line.subtotal"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+
+                <div style="text-align: right; margin-top: 15px;">
+                    <strong>Total Amount:</strong>
+                    <span><t t-esc="doc.total_amount"/></span>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

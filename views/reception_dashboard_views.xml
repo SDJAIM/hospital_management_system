@@ -1,0 +1,31 @@
+          <odoo>
+    <record id="view_reception_dashboard" model="ir.ui.view">
+        <field name="name">reception.dashboard.form</field>
+        <field name="model">reception.dashboard</field>
+        <field name="arch" type="xml">
+            <form string="Reception Dashboard" class="oe_form_configuration">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>Reception Dashboard</h1>
+                    </div>
+                    <group>
+                    <div class="equal-button-row o_row">
+                        <button name="open_patient_registration" string="Patient Registration" type="object" class="btn-equal btn-primary"/>
+                        <button name="open_vital_signs" string="Vital Signs" type="object" class="btn-equal btn-success"/>
+                        <button name="open_appointments" string="Appointments" type="object" class="btn-equal btn-info"/>
+                    </div>
+                </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_reception_home" model="ir.actions.act_window">
+    <field name="name">Reception Dashboard</field>
+    <field name="res_model">reception.dashboard</field>
+    <field name="view_mode">form</field>
+    <field name="target">current</field>
+</record>
+
+
+ <menuitem id="reception_home" name="Home" parent="reception" action="hospital_management_system.action_reception_home" sequence="0"/>
+</odoo>

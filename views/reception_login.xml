@@ -1,0 +1,42 @@
+<!--                     <odoo>-->
+<!--    <data>-->
+<!--        &lt;!&ndash; Define the login form view &ndash;&gt;-->
+<!--        <record id="view_reception_login_form" model="ir.ui.view">-->
+<!--            <field name="name">reception.login.form</field>-->
+<!--            <field name="model">reception.login</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Reception Login" class="oe_login_form" create="false" edit="false">-->
+<!--            <sheet>-->
+<!--                <div>-->
+<!--                    <h2>Welcome</h2>-->
+
+<!--                    <div class="d-flex align-items-center mb-2">-->
+<!--                        <span class="o_form_label" style="width: 100px;">Email</span>-->
+<!--                        <field name="email" placeholder="Email address" required="1" nolabel="1"/>-->
+<!--                    </div>-->
+
+<!--                    <div class="d-flex align-items-center mb-2">-->
+<!--                        <span class="o_form_label" style="width: 100px;">Password</span>-->
+<!--                        <field name="password" placeholder="Password" password="True" required="1" nolabel="1"/>-->
+<!--                    </div>-->
+
+<!--                    <footer>-->
+<!--                        <button name="action_redirect_reception" type="object" string="Sign In" class="btn btn-primary"/>-->
+<!--                    </footer>-->
+<!--                </div>-->
+<!--            </sheet>-->
+<!--        </form>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        &lt;!&ndash; Define the action for the login form &ndash;&gt;-->
+<!--        <record id="action_reception_login" model="ir.actions.act_window">-->
+<!--            <field name="name">Reception Login</field>-->
+<!--            <field name="res_model">reception.login</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="view_id" ref="view_reception_login_form"/>-->
+<!--            <field name="target">new</field>-->
+<!--        </record>-->
+<!--    </data>-->
+<!--    <menuitem id="reception" name="Reception" sequence="0" action="hospital_management_system.action_reception_login"/>-->
+
+<!--</odoo>-->

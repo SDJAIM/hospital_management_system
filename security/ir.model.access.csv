@@ -1,0 +1,18 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hospital_patient,hospital.patient,model_hospital_patient,base.group_user,1,1,1,1
+access_hospital_appointment_user,hospital.appointment user,model_hospital_appointment,base.group_user,1,1,1,1
+access_hospital_doctor_note,hospital.doctor.note,model_hospital_doctor_note,base.group_user,1,1,1,1
+access_hospital_medical_history,hospital.medical.history,model_hospital_medical_history,base.group_user,1,1,1,1
+access_hospital_medication_plan,hospital.medication.plan,model_hospital_medication_plan,base.group_user,1,1,1,1
+access_hospital_vital_sign,hospital.vital.sign,model_hospital_vital_sign,base.group_user,1,1,1,1
+access_medication_plan_line_user,access_medication_plan_line_user,model_hospital_medication_plan_line,base.group_user,1,1,1,1
+access_hospital_icu_bed_user,hospital.icu.bed.user,model_hospital_icu_bed,,1,1,1,1
+access_hospital_icu_booking,hospital.icu.booking,model_hospital_icu_booking,,1,1,1,1
+access_hospital_medicine_line_user,hospital.medicine.line,model_hospital_medicine_line,base.group_user,1,1,1,1
+access_res_partner_patient,res_partner_patient_access,base.model_res_partner,base.group_user,1,1,1,1
+access_hospital_medicalbill,hospital_management.model_medical_bill,model_medical_bill,base.group_user,1,1,1,1
+access_hospital_medicalbill_line,hospital_management.model_medical_bill_line,model_medical_bill_line,base.group_user,1,1,1,1
+access_medicine_master,medicine.master,model_medicine_master,base.group_user,1,1,1,1
+access_hospital_medicine_master,hospital.medicine.master,model_hospital_medicine_master,base.group_user,1,1,1,1
+access_hospital_reception_dashboard,hospital_management.model_reception_dashboard,model_reception_dashboard,base.group_user,1,1,1,1
+access_hospital_test_type_user,hospital.test.type,model_hospital_test_type,base.group_user,1,1,1,1

@@ -1,0 +1,36 @@
+<!--<odoo>-->
+<!--    <data>-->
+<!--        &lt;!&ndash; Login Form View &ndash;&gt;-->
+<!--        <record id="view_doctor_login_form" model="ir.ui.view">-->
+<!--            <field name="name">doctor.login.form</field>-->
+<!--            <field name="model">doctor.login</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Doctor Login" class="oe_login_form" create="false" edit="false">-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <field name="email" placeholder="Email address"/>-->
+<!--                            <field name="password" placeholder="Password" password="True"/>-->
+<!--                            <footer>-->
+<!--                                <button name="action_redirect_doctor"-->
+<!--                                        type="object"-->
+<!--                                        string="Sign In"-->
+<!--                                        class="btn-primary"/>-->
+<!--                            </footer>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        &lt;!&ndash; Action to Open Login Form &ndash;&gt;-->
+<!--            <record id="action_doctor_login" model="ir.actions.act_window">-->
+<!--            <field name="name">Doctor Login</field>-->
+<!--            <field name="res_model">doctor.login</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="view_id" ref="view_doctor_login_form"/>-->
+<!--            <field name="target">new</field>-->
+<!--        </record>-->
+<!--          &lt;!&ndash;menuitem id="doctor" name="Doctor login"  action="action_doctor_login" /&ndash;&gt;-->
+<!--    </data>-->
+<!--     <menuitem id="doctor"  name="Doctor Log" sequence="1" action="hospital_management_system.action_doctor_login"/>-->
+<!--</odoo>-->

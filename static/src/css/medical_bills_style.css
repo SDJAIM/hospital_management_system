@@ -1,0 +1,108 @@
+.bg-green {
+    background-color: #d4edda !important; /* Light green */
+    font-weight: bold;
+}
+
+.bg-red {
+    background-color: #dad9db !important; /* Light red */
+    font-weight: bold;
+}
+
+.bg-blue {
+    background-color: #d1ecf1 !important; /* Light blue */
+    font-style: italic;
+}
+.bg-yellow {
+    background-color: #fff3cd !important; /* Light yellow */
+    font-weight: bold;
+}
+
+.bg-purple {
+    background-color: #f3e5f5 !important; /* Light purple/lavender */
+    font-weight: bold;
+}
+.bold-field .o_input,
+.bold-field.o_field_widget {
+    font-weight: bold !important;
+}
+.equal-button-row {
+    display: flex;
+    flex-wrap: nowrap;     /* Prevent wrapping */
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.equal-button-group {
+    display: flex;
+    width:800px;
+    gap: 10px;
+}
+.text-bold{
+font-weight: bold;
+}
+
+.text-color-available{
+ color: green;
+
+}
+.text-green {
+    color: green;
+    font-weight: bold;
+}
+
+.text-red {
+    color: red;
+    font-weight: bold;
+}
+
+.text-color-Booked{
+ color: red;
+
+}
+
+.btn-equal {
+    flex: 1;
+    text-align: center;
+
+    min-width: 200px;
+    height: 40px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.left-text {
+    text-align: center !important;
+    display: block;
+    width: 100%;
+}
+.left-text {
+    text-align: left;
+}
+/* Wider column */
+.o_list_view .wide-column {
+    min-width: 160px !important;
+}
+
+
+
+.wrap-condition {
+    max-width: 100px;   /* You can change this value */
+    white-space: normal !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.o_menu_entry_lvl_1:hover {
+    background-color: #e0f7fa !important;
+    color: #00796b !important;
+}
+
+.o_selected_menu {
+    background-color: #b2ebf2 !important;
+    color: #004d40 !important;
+    font-weight: bold;
+}

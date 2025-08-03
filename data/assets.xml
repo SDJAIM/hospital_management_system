@@ -1,0 +1,7 @@
+<odoo>
+    <template id="assets_backend" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/HMS/static/src/js/reset_form.js"></script>
+        </xpath>
+    </template>
+</odoo>

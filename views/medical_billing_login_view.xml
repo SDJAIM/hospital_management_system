@@ -1,0 +1,36 @@
+<!--<odoo>-->
+<!--    <data>-->
+<!--        &lt;!&ndash; Login Form View &ndash;&gt;-->
+<!--        <record id="view_medical_billing_login_form" model="ir.ui.view">-->
+<!--            <field name="name">medical.billing.login.form</field>-->
+<!--            <field name="model">medical.billing.login</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Medical Billing Login" class="oe_login_form" create="false" edit="false">-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <field name="email" placeholder="Email address"/>-->
+<!--                            <field name="password" placeholder="Password" password="True"/>-->
+<!--                            <footer>-->
+<!--                                <button name="action_redirect_billing"-->
+<!--                                        type="object"-->
+<!--                                        string="Sign In"-->
+<!--                                        class="btn-primary"/>-->
+<!--                            </footer>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        &lt;!&ndash; Action to Open Login Form &ndash;&gt;-->
+<!--            <record id="action_medical_billing_login" model="ir.actions.act_window">-->
+<!--            <field name="name">Medical Billing Login</field>-->
+<!--            <field name="res_model">medical.billing.login</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="view_id" ref="view_medical_billing_login_form"/>-->
+<!--            <field name="target">new</field>-->
+<!--        </record>-->
+<!--    </data>-->
+<!--    <menuitem id="billing_id" name="Medical Billing" sequence="2" action="hospital_management_system.action_medical_billing_login"/> &lt;!&ndash; No action here &ndash;&gt;-->
+
+<!--</odoo>-->

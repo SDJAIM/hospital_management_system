@@ -1,0 +1,70 @@
+<odoo>
+  <record id="view_icu_booking_form" model="ir.ui.view">
+    <field name="name">hospital.icu.booking.form</field>
+    <field name="model">hospital.icu.booking</field>
+    <field name="arch" type="xml">
+      <form string="ICU Bed Booking">
+        <sheet>
+          <group>
+            <field name="patient_id"/>
+            <field name="bed_id"/>
+            <field name="start_datetime"/>
+            <field name="end_datetime"/>
+          </group>
+            <group>
+              <button name="action_confirm" type="object" string="Confirm" invisible="state != 'draft'" class="oe_highlight"/>
+              <button name="action_ongoing" type="object" string="Ongoing" invisible="state != 'confirmed'" class="oe_highlight"/>
+              <button name="action_complete" type="object" string="Complete" invisible="state != 'ongoing'" class="oe_highlight"/>
+              <button name="action_cancel" type="object" string="Cancelled" invisible="state == 'completed'"/>
+            </group>
+            <group>
+            <field name="state" widget="statusbar" options="{'clickable':'1'}" />
+            <field name="notes"/>
+          </group>
+
+          <!--group>
+            <field name="bed_image" widget="image" class="oe_avatar" options="{'preview_image': 'bed_image'}"/>
+          </group-->
+
+          <div class="oe_button_box" name="buttons" style="margin-top: 20px; text-align: center;">
+            <button name="action_save_icu_save"
+                    type="object"
+                    string="Save"
+                    class="btn-primary"
+                    style="margin-right: 10px; padding: 10px 20px; font-size: 20px;"/>
+          </div>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_icu_booking_list" model="ir.ui.view">
+    <field name="name">hospital.icu.booking.list</field>
+    <field name="model">hospital.icu.booking</field>
+    <field name="arch" type="xml">
+      <list string="ICU Bookings" default_order="start_datetime desc">
+        <field name="patient_id"/>
+        <field name="bed_id"/>
+        <field name="start_datetime"/>
+        <field name="end_datetime"/>
+        <field name="state" widget="statusbar"/>
+      </list>
+    </field>
+  </record>
+
+  <record id="action_icu_bookings" model="ir.actions.act_window">
+    <field name="name">ICU Bookings</field>
+    <field name="res_model">hospital.icu.booking</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+        Create and manage ICU bed bookings for patients.
+      </p>
+    </field>
+  </record>
+
+  <menuitem id="menu_icu_booking"
+            name="ICU Bookings"
+            parent="icu_bed_login"
+            action="action_icu_bookings"/>
+</odoo>

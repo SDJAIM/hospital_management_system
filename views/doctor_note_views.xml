@@ -1,0 +1,51 @@
+<odoo>
+    <record id="view_doctor_note_list" model="ir.ui.view">
+        <field name="name">hospital.doctor.note.list</field>
+        <field name="model">hospital.doctor.note</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="patient_id" optional="show"/>
+                <field name="doctor_id" optional="show"/>
+                <field name="note_date" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_doctor_note_form" model="ir.ui.view">
+        <field name="name">hospital.doctor.note.form</field>
+        <field name="model">hospital.doctor.note</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="patient_id"/>
+                        <field name="doctor_id"/>
+                        <field name="note_date"/>
+                        <field name="notes"/>
+                    </group>
+                     <div class="oe_button_box" name="buttons" style="margin-top: 20px; text-align: center;">
+                     <button name="action_save_doctor_note"
+                            type="object"
+                            string="Save"
+                            class="btn-primary"
+                            style="margin-right: 10px; padding: 10px 20px; font-size: 20px;"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_doctor_note" model="ir.actions.act_window">
+        <field name="name">Doctor Notes</field>
+        <field name="res_model">hospital.doctor.note</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <odoo>
+
+  <!--menuitem id="menu_doctor_note" name="Doctor Notes" parent="doctor_menu" action="action_doctor_note"/-->
+
+
+</odoo>
+
+</odoo>

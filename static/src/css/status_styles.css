@@ -1,0 +1,12 @@
+/* status_styles.css */
+.status-available {
+    font-weight: bold;
+    color: green;
+    text-transform: uppercase;
+}
+
+.status-booked {
+    font-weight: bold;
+    color: red;
+    text-transform: uppercase;
+}

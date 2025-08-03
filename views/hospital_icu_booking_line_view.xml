@@ -1,0 +1,40 @@
+<!--odoo>
+
+    <record id="view_hospital_icu_booking_line_kanban" model="ir.ui.view">
+        <field name="name">hospital.icu.booking.line.kanban</field>
+        <field name="model">hospital.icu.booking.line</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                     <img t-att-src="'/hospital_management_system/static/description/bed1.png'"
+                     alt="ICU Bed"
+                     class="img img-fluid mb-2"
+                     style="max-height: 100px; border-radius: 5px;"/>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_details">
+                            <strong>ICU Bed: </strong><span t-esc="record.bed_id.display_name"/>
+                        </div>
+                        <div class="oe_kanban_details">
+                            <strong>Patient: </strong><span t-esc="record.patient_id.name"/>
+                        </div>
+                        <div class="oe_kanban_details">
+                            <strong>Status: </strong><span t-esc="record.state"/>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+      <record id="action_icu_booking_line" model="ir.actions.act_window">
+        <field name="name">ICU Booking Line</field>
+        <field name="res_model">hospital.icu.booking.line</field>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="view_hospital_icu_booking_line_kanban"/>
+        <field name="context">{}</field>
+    </record>
+
+
+
+
+     <menuitem id="icu_menu_id" name="ICU Booking Line" parent="icu_bed_login" action="action_icu_booking_line"/>
+</odoo-->

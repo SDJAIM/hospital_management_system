@@ -1,0 +1,121 @@
+<odoo>
+
+    <!-- list View: Medical Bills -->
+    <record id="view_medical_bill_list" model="ir.ui.view">
+        <field name="name">medical.bill.list</field>
+        <field name="model">medical.bill</field>
+        <field name="arch" type="xml">
+            <list string="Medical Bills" >
+                <field name="patient_id"  />
+                <field name="patient_name" />
+                <field name="patient_age" />
+                <field name="patient_gender" optional="show"/>
+                <field name="total_amount" readonly="1" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View: Medical Bill -->
+    <record id="view_medical_bill_form" model="ir.ui.view">
+        <field name="name">medical.bill.form</field>
+        <field name="model">medical.bill</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="print_medical_bill_report"
+                            string="Print Bill"
+                            type="object"
+                            class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="patient_id"/>
+                        <field name="patient_name"/>
+                        <field name="patient_age"/>
+                        <field name="patient_gender"/>
+                        <field name="date"/>
+                    </group>
+
+                   <group>
+                    <field name="line_ids" string="Medicines">
+                        <list editable="bottom" >
+                            <field name="medicine_id" width="40%%"/>
+                            <field name="cost" width="20%%"/>
+                            <field name="quantity" width="20%%"/>
+                            <field name="subtotal" width="20%%" readonly="1" />
+                        </list>
+                    </field>
+                    </group>
+
+                    <group >
+
+                        <field name="total_amount" readonly="1" class="bold-field"/>
+                    </group>
+
+                    <div class="oe_button_box" name="buttons" style="margin-top: 20px; text-align: center;">
+                        <button name="action_save_bill_save"
+                                type="object"
+                                string="Save"
+                                class="btn-primary"
+                                style="margin-right: 10px; padding: 10px 20px; font-size: 20px;"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action: Medical Billing -->
+    <record id="action_medical_bill" model="ir.actions.act_window">
+        <field name="name">Medical Billing</field>
+        <field name="res_model">medical.bill</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_medical_bill_list"/>
+    </record>
+
+    <!-- Menu: Medical Billing -->
+    <menuitem id="billing" parent="billing_id" action="hospital_management_system.action_medical_bill"/>
+
+    <!-- ================= Medicine Master Views ================= -->
+
+    <!-- list View: Medicine Master -->
+    <record id="view_medicine_master_list" model="ir.ui.view">
+        <field name="name">medicine.master.list</field>
+        <field name="model">medicine.master</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="cost"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View: Medicine Master -->
+    <record id="view_medicine_master_form" model="ir.ui.view">
+        <field name="name">medicine.master.form</field>
+        <field name="model">medicine.master</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="cost"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action: Medicine Master -->
+    <record id="action_medicine_master" model="ir.actions.act_window">
+        <field name="name">Medicine Master</field>
+        <field name="res_model">medicine.master</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menu: Medicine Master -->
+    <!--menuitem id="menu_medicine_master"
+              name="Medicine Master"
+              parent="billing_id"
+              action="hospital_management_system.action_medicine_master"/-->
+
+</odoo>

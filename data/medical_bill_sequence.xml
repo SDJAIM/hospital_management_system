@@ -1,0 +1,9 @@
+<odoo>
+    <record id="seq_medical_bill" model="ir.sequence">
+        <field name="name">Medical Bill</field>
+        <field name="code">medical.bill</field>
+        <field name="prefix">MBILL/</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False"/>
+    </record>
+</odoo>

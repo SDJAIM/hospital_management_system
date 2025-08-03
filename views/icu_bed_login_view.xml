@@ -1,0 +1,38 @@
+<!--<odoo>-->
+<!--    <data>-->
+<!--        &lt;!&ndash; ICU Login Form View &ndash;&gt;-->
+<!--        <record id="view_icu_bed_login_form" model="ir.ui.view">-->
+<!--            <field name="name">icu.bed.login.form</field>-->
+<!--            <field name="model">icu.bed.login</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="ICU Bed Login" class="oe_login_form" create="false" edit="false">-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <field name="email" placeholder="Email address"/>-->
+<!--                            <field name="password" placeholder="Password" password="True"/>-->
+<!--                            <footer>-->
+<!--                                <button name="action_redirect_icu"-->
+<!--                                        type="object"-->
+<!--                                        string="Sign In"-->
+<!--                                        class="btn-primary"/>-->
+<!--                            </footer>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        &lt;!&ndash; ICU Login Action &ndash;&gt;-->
+<!--        <record id="action_icu_bed_login" model="ir.actions.act_window">-->
+<!--            <field name="name">ICU Login</field>-->
+<!--            <field name="res_model">icu.bed.login</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="view_id" ref="view_icu_bed_login_form"/>-->
+<!--            <field name="target">new</field>-->
+<!--        </record>-->
+
+<!--        &lt;!&ndash; ICU Login Menu &ndash;&gt;-->
+<!--        &lt;!&ndash;menuitem id="icu_bed_login_menu" name="ICU Login"  /&ndash;&gt;-->
+<!-- <menuitem id="icu_bed_login"   action="hospital_management_system.action_icu_bed_login" sequence="3"/>-->
+<!--    </data>-->
+<!--</odoo>-->

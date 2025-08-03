@@ -1,0 +1,51 @@
+<odoo>
+
+        <!-- Define the parent Reception menu item -->
+<!--         <record id="action_reception_menu" model="ir.actions.act_window">-->
+<!--            <field name="name">Reception</field>-->
+<!--            <field name="res_model">ir.ui.menu</field>-->
+<!--            <field name="view_mode">list</field>-->
+<!--            <field name="domain">[('id', '=', ref('reception'))]</field>-->
+<!--        </record>-->
+
+<!--        <menuitem id="reception" name="Reception" sequence="1"/>-->
+
+<!--        &lt;!&ndash; Define child models and their actions under Reception menu &ndash;&gt;-->
+<!--        <menuitem id="menu_patient" name="Registration" parent="reception" action="action_patient"/>-->
+<!--        <menuitem id="menu_appointments" name="Appointments" parent="reception" action="action_appointment"/>-->
+<!--        <menuitem id="menu_vital_signs" name="Vital Signs" parent="reception" action="action_vital_sign"/>-->
+
+<!--        &lt;!&ndash; Define the action for the Reception login (you will show this form before accessing the menu) &ndash;&gt;-->
+<!--        <record id="action_reception_login" model="ir.actions.act_window">-->
+<!--            <field name="name">Reception Login</field>-->
+<!--            <field name="res_model">reception.login</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="target">new</field>-->
+<!--        </record>-->
+
+
+<!--        <record id="action_patient" model="ir.actions.act_window">-->
+<!--            <field name="name">Registration</field>-->
+<!--            <field name="res_model">hospital.patient</field>-->
+<!--            <field name="view_mode">list,form</field>-->
+<!--            <field name="target">current</field>-->
+<!--        </record>-->
+
+
+<!--        <record id="action_appointment" model="ir.actions.act_window">-->
+<!--            <field name="name">Appointments</field>-->
+<!--            <field name="res_model">hospital.appointment</field>-->
+<!--            <field name="view_mode">list,form</field>-->
+<!--            <field name="target">current</field>-->
+<!--        </record>-->
+
+
+<!--        <record id="action_vital_sign" model="ir.actions.act_window">-->
+<!--            <field name="name">Vital Signs</field>-->
+<!--            <field name="res_model">hospital.vital.sign</field>-->
+<!--            <field name="view_mode">list,form</field>-->
+<!--            <field name="target">current</field>-->
+<!--        </record>-->
+
+</odoo>
+

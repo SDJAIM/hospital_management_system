@@ -1,0 +1,254 @@
+ 
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f9;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+.over{
+    flex-direction: column;
+}
+.container {
+    margin-top: 50px;
+    margin-left: 12%;
+  display: flex;
+  width: 95%;
+  max-width: 1200px;
+  /* background-color: #fff; */
+ /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+  border-radius: 12px;
+  overflow: hidden;
+}
+ 
+.left {
+  flex: 1;
+  color: #007BFF;
+ 
+  padding: 60px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.2;
+}
+ 
+.right {
+  flex: 1.2;
+ 
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+.services {
+  display: flex;
+  /* justify-content: space-between; */
+  /* gap: 15px; */
+  /* flex-wrap: wrap; */
+}
+ 
+.box {
+ 
+  height:200px;
+   width: 300px;
+ margin: 50px 50px 50px;
+  background: #fff;
+  padding: 50px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  transition: transform 0.3s ease;
+}
+ 
+.box:hover {
+  transform: translateY(-5px);
+}
+ 
+.box i {
+ 
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+ 
+.box h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+}
+.modules h1{
+    text-align: left;
+    color: #007bff;
+    margin-top: 3%;
+    margin-left: 20%;
+    font-size: 4.5rem;
+  font-weight: bold;
+}
+/* .modules p{
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.1rem;
+  line-height: 1.7;
+} */
+.registration-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 10px;
+}
+ 
+.reg-text h2 {
+  margin-left: 10%;
+  flex: 1;
+  font-size: 3rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 4%;
+}
+.reg-text p{
+   
+    margin-right: 3%;
+    margin-left: 10%;
+ font-size: 1.1rem;
+  line-height: 1.7;
+}
+ 
+.reg-image {
+  flex: 0.8;
+  max-width: 45%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-right: 2%;
+}
+.reception-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 10px;
+}
+ 
+.reception-text h2 {
+  /* margin-left: 10%; */
+  flex: 1;
+  font-size: 3rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 4%;
+}
+.reception-text p{
+   
+    margin-right: 3%;
+    /* margin-left: 10%; */
+ font-size: 1.1rem;
+  line-height: 1.7;
+}
+ 
+.reception-image {
+    margin-top: 3%;
+    margin-left: 3%;
+  flex: 0.8;
+  max-width: 45%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-right: 2%;
+}
+.doctor h1{
+    margin-top: 5%;
+    text-align: center;
+ font-size: 4.5rem;
+  font-weight: bold;
+  line-height: 1.6;
+   color: #007bff;
+}
+.doctor-image{
+  max-width: 60%;
+  height:auto;
+  margin-left: 20%;
+  margin-top: 3%;
+}
+.doctor p{
+  margin :5% 15% 5% 15%;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+ .contact-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      background-image: url("geometric-abstract-creative-blue-paperboard-background-flat-lay.jpg");
+       background-repeat: no-repeat;
+  background-position: center;
+  background-size:auto;
+      margin-left: 10%;
+    width: 80%;
+    }
+ 
+    .contact-card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 80%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+ 
+    .contact-card h1 {
+      margin-bottom: 10px;
+      font-size: 2em;
+      color: #333;
+    }
+ 
+    .contact-card p {
+      color: #555;
+      font-size: 1.1rem;
+  line-height: 1.7;
+      margin-bottom: 30px;
+    }
+ 
+    .contact-info {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+ 
+    .contact-info strong {
+      display: block;
+      color: #000;
+    }
+ 
+    .contact-info span {
+      color: #555;
+    }
+ 
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+ 
+    .btn:hover {
+      background-color: #0056b3;
+    }

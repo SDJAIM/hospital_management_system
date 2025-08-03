@@ -1,0 +1,15 @@
+.btn-save-hms {
+    background-color: #28a745; /* Green */
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 5px 15px;
+}
+
+.btn-reset-hms {
+    background-color: #dc3545; /* Red */
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 5px 15px;
+}

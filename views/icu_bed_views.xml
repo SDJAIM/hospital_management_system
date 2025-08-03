@@ -1,0 +1,137 @@
+<odoo>
+    <!-- Form View -->
+    <!--record id="view_icu_bed_form" model="ir.ui.view">
+        <field name="name">hospital.icu.bed.form</field>
+        <field name="model">hospital.icu.bed</field>
+        <field name="arch" type="xml">
+            <form string="ICU Bed">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="bed_image" widget="image" optional="show"/>
+                        <field name="status" optional="show"/>
+                        <field name="is_available" readonly="1" optional="show"/>
+                        <field name="patient_id" optional="show"/>
+                        <field name="assigned_date" optional="show"/>
+                    </group>
+
+                    <div class="oe_button_box" name="buttons"
+                         style="margin-top: 20px; text-align: center;">
+                        <button name="action_save_icu_bed_save"
+                                type="object"
+                                string="Save"
+                                class="btn-primary"
+                                style="margin-right: 10px; padding: 10px 20px; font-size: 20px;"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record-->
+
+    <!-- Kanban View -->
+   <!--record id="view_icu_bed_kanban" model="ir.ui.view">
+    <field name="name">hospital.icu.bed.kanban</field>
+    <field name="model">hospital.icu.bed</field>
+    <field name="arch" type="xml">
+      <kanban class="o_kanban_full">
+        <field name="name"/>
+        <field name="code"/>
+        <field name="status"/>
+        <field name="bed_image"/>
+        <field name="is_available"/>
+        <field name="patient_id"/>
+        <field name="assigned_date"/>
+
+        <templates>
+          <t t-name="kanban-box">
+            <div class="oe_kanban_global_click o_kanban_card"
+                 style="width: 550px; display: inline-block; margin: 10px; vertical-align: top;">
+              <div style="text-align: center; padding: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); border-radius: 8px; background: #fff;">
+
+
+                <img t-att-src="'/hospital_management_system/static/description/bed1.png'"
+                     alt="ICU Bed"
+                     class="img img-fluid mb-2"
+                     style="max-height: 100px; border-radius: 5px;"/>
+
+
+                <div class="fw-bold mb-1"
+                     t-attf-style="color: #{record.status.value == 'available' and 'green' or 'red'}; font-weight: bold;">
+                    <t t-esc="record.name.value"/> -
+
+                                </div>
+
+
+
+
+
+               <div>
+                  <div t-if="record.patient_id.value" class="text-bold">
+                    <span>Patient: </span>
+                    <t t-esc="record.patient_id.value" />
+                  </div>
+
+                        <div t-if="record.status.value">
+                          <span class="text-bold">Status:</span>
+                          <span t-attf-class="text-bold #{record.status.value == 'available' and 'text-red' or 'text-green'}">
+                              <t t-esc="record.status.value"/>
+                          </span>
+                        </div>
+
+                      <div t-if="record.assigned_date.value" class="text-bold">
+                        <span>Assigned: </span>
+                        <t t-esc="record.assigned_date.value"/>
+                      </div>
+                  </div>
+
+
+
+                <div>
+                  <div t-if="record.status.value == 'available'"
+                       style="font-weight: bold; color: green;" class="text-color-available" >
+                    Available
+                  </div>
+                  <div t-if="record.status.value == 'booked'"
+                       style="font-weight: bold; color: red;" class="text-color-available">
+                    Booked
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </t>
+        </templates>
+      </kanban>
+    </field>
+  </record-->
+    <!-- list View -->
+    <!--record id="view_icu_bed_list" model="ir.ui.view">
+        <field name="name">hospital.icu.bed.list</field>
+        <field name="model">hospital.icu.bed</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="status"/>
+                <field name="is_available"/>
+                <field name="patient_id"/>
+                <field name="assigned_date"/>
+            </list>
+        </field>
+    </record-->
+
+    <!-- Action -->
+    <!--record id="action_icu_beds" model="ir.actions.act_window">
+        <field name="name">ICU Beds</field>
+        <field name="res_model">hospital.icu.bed</field>
+        <field name="view_mode">kanban,list,form</field>
+    </record-->
+
+    <!-- Menu -->
+    <!--menuitem id="icu_menu_id"
+              parent="icu_bed_login"
+              action="hospital_management_system.action_icu_beds"/-->
+    <!--menuitem id="icu_menu_id"
+              parent="icu_bed_login"/-->
+</odoo>

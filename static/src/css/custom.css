@@ -1,0 +1,42 @@
+.icu-bed-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 4px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.icu-bed-img {
+  width: 80px;
+  height: auto;
+  margin-right: 16px;
+}
+
+.icu-bed-info {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.icu-bed-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 3px 7px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.badge-danger {
+  background-color: #d9534f;
+}
+
+.badge-success {
+  background-color: #5cb85c;
+}

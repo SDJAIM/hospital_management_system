@@ -1,0 +1,17 @@
+<odoo>
+    <record id="test_type_blood" model="hospital.test.type">
+        <field name="name">Blood Test</field>
+    </record>
+    <record id="test_type_cardiac" model="hospital.test.type">
+        <field name="name">Cardiac Test</field>
+    </record>
+    <record id="test_type_urine" model="hospital.test.type">
+        <field name="name">Urine Test</field>
+    </record>
+    <record id="test_type_imaging" model="hospital.test.type">
+        <field name="name">Imaging</field>
+    </record>
+    <record id="test_type_rapid" model="hospital.test.type">
+        <field name="name">Rapid Test</field>
+    </record>
+</odoo>

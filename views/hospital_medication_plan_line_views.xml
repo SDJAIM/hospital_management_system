@@ -1,0 +1,73 @@
+<odoo>
+    <!-- list View -->
+    <record id="view_medication_plan_line_list" model="ir.ui.view">
+        <field name="name">hospital.medication.plan.line.list</field>
+        <field name="model">hospital.medication.plan.line</field>
+        <field name="arch" type="xml">
+            <list string="Medication Plan Lines">
+
+                <field name="bed_id"/>
+                <field name="bed_patient_name"/>
+                <field name="medicine_name" />
+                <field name="patient_id" />
+                <field name="dosage"  optional="show"/>
+                <field name="duration"  optional="show"/>
+                <field name="frequency_morning" optional="show"/>
+                <field name="frequency_afternoon" optional="show"/>
+                <field name="frequency_evening" optional="show"/>
+                <field name="frequency_night" optional="show"/>
+                <field name="instruction" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_medication_plan_line_form" model="ir.ui.view">
+        <field name="name">hospital.medication.plan.line.form</field>
+        <field name="model">hospital.medication.plan.line</field>
+        <field name="arch" type="xml">
+            <form string="Medication Line">
+                <sheet>
+                    <group>
+
+                        <field name="bed_id"/>
+                        <field name="bed_patient_name"/>
+                        <field name="medicine_name"/>
+                        <field name="dosage"/>
+                        <field name="duration" />
+                    </group>
+                    <group string="Dosage">
+                        <field name="frequency_morning"/>
+                        <field name="frequency_afternoon"/>
+                        <field name="frequency_evening"/>
+                        <field name="frequency_night"/>
+                    </group>
+                    <group>
+                        <field name="instruction"/>
+                    </group>
+                     <div class="oe_button_box" name="buttons" style="margin-top: 20px; text-align: center;">
+                            <button name="action_save_medication_line"
+                                    type="object"
+                                    string="Save"
+                                    class="btn-primary"
+                                    style="margin-right: 10px; padding: 10px 20px; font-size: 20px;"/>
+                     </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_medication_plan" model="ir.actions.act_window">
+
+        <field name="res_model">hospital.medication.plan.line</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_medication_plan_line_list"/> <!-- Optional -->
+    </record>
+
+    <!-- Menu -->
+
+
+    <!-- Add Menu Item -->
+    <menuitem id="menu_medication_plan_lines" name="Medication Plan" parent="icu_bed_login" action="hospital_management_system.action_medication_plan" />
+</odoo>

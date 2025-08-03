@@ -1,0 +1,33 @@
+<odoo noupdate="1">
+
+    <record id="icu_bed_1" model="hospital.icu.bed">
+        <field name="name">ICU Bed A1</field>
+        <field name="code">A1</field>
+    </record>
+
+    <record id="icu_bed_2" model="hospital.icu.bed">
+        <field name="name">ICU Bed A2</field>
+        <field name="code">A2</field>
+    </record>
+
+    <record id="icu_bed_3" model="hospital.icu.bed">
+        <field name="name">ICU Bed A3</field>
+        <field name="code">A3</field>
+    </record>
+
+    <record id="icu_bed_4" model="hospital.icu.bed">
+        <field name="name">ICU Bed A4</field>
+        <field name="code">A4</field>
+    </record>
+
+    <record id="icu_bed_5" model="hospital.icu.bed">
+        <field name="name">ICU Bed A5</field>
+        <field name="code">A5</field>
+    </record>
+
+    <record id="icu_bed_6" model="hospital.icu.bed">
+        <field name="name">ICU Bed A6</field>
+        <field name="code">A6</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,8 @@
+tr.confirmed-row > td {
+    color: #004085 !important; /* Darker blue */
+    font-weight: bold;
+}
+.o_list_view tbody tr.confirmed_row > td {
+    color: #004085 !important; /* Darker blue */
+    font-weight: 700;
+}

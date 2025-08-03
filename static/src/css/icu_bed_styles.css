@@ -1,0 +1,12 @@
+.o_kanban_dashboard .o_kanban_card {
+    width: 250px;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.o_kanban_dashboard .o_kanban_image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

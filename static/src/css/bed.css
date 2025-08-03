@@ -1,0 +1,35 @@
+.bed-box {
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 12px;
+  margin: 10px;
+  text-align: center;
+  width: 150px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #fff;
+}
+
+.bed-box.available {
+  border: 2px solid #28a745; /* green */
+}
+
+.bed-box.occupied {
+  border: 2px solid #dc3545; /* red */
+}
+
+.bed-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.bed-name {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.bed-status {
+  margin-top: 3px;
+  font-size: 13px;
+}
