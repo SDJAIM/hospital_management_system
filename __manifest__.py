@@ -16,7 +16,7 @@
     'category': 'Hospital Management System',
     'version': '18.0.1.0.0',
     'sequence': 5,
-    'depends': ['base','mail'],
+    'depends': ['base', 'mail', 'website'],
     'images':['static/description/banner.png'],
 
     'data': [
@@ -56,6 +56,10 @@
 
         # Test Types
         'data/test_type_data.xml',
+        
+        # Website Booking
+        'views/website_appointment_templates.xml',
+        'views/website_confirmation_template.xml',
     ],
 
     'assets': {
@@ -74,9 +78,9 @@
             'hospital_management_system/static/description/bed1.png',
           #  'hospital_management_system/static/src/js/medical_bill_header_style.js',
         ],
-        # 'web.assets_frontend': [
-        #     'hospital_management_system/static/src/css/style.css'
-        # ],
+        'web.assets_frontend': [
+            'hospital_management_system/static/src/css/website_appointment.css'
+        ],
     },
 
     'installable': True,

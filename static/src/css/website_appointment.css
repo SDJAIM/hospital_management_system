@@ -1,0 +1,38 @@
+/* Appointment Booking Form Styles */
+.appointment-booking-form {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+}
+
+.appointment-booking-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.appointment-booking-form label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Confirmation Page Styles */
+.appointment-confirmation {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.appointment-details {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.appointment-details h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.badge-info {
+    background-color: #17a2b8;
+}

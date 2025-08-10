@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="appointment_confirmation" name="Appointment Confirmation">
+        <t t-call="website.layout">
+            <div class="container mt-4">
+                <div class="alert alert-success">
+                    <h1>Appointment Booked Successfully!</h1>
+                    <p>Your appointment has been submitted for approval.</p>
+                    
+                    <t t-if="appointment.insurance_docs">
+                        <p>We've received your insurance documents. Our secretary will contact you shortly to verify your authorization.</p>
+                    </t>
+                    <t t-else="">
+                        <p>Please bring any required documents to your appointment.</p>
+                    </t>
+                    
+                    <div class="appointment-details mt-4">
+                        <h3>Appointment Details</h3>
+                        <p><strong>Date:</strong> <t t-esc="appointment.appointment_date"/></p>
+                        <p><strong>Doctor:</strong> <t t-esc="appointment.doctor_id.name"/></p>
+                        <p><strong>Status:</strong> <span class="badge badge-info"><t t-esc="appointment.state"/></span></p>
+                    </div>
+                    
+                    <a href="/" class="btn btn-primary mt-3">Return to Home</a>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

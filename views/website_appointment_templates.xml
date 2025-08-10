@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="appointment_booking" name="Appointment Booking">
+        <t t-call="website.layout">
+            <div class="container mt-4">
+                <h1>Book an Appointment</h1>
+                <form action="/appointment/submit" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Service Type</label>
+                                <select name="service_type" class="form-control" required>
+                                    <option value="">Select a service</option>
+                                    <option t-foreach="services" t-as="service" t-att-value="service.id">
+                                        <t t-esc="service.name"/>
+                                    </option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Doctor</label>
+                                <select name="doctor_id" class="form-control" required>
+                                    <option value="">Select a doctor</option>
+                                    <option t-foreach="doctors" t-as="doctor" t-att-value="doctor.id">
+                                        <t t-esc="doctor.name"/>
+                                    </option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Date</label>
+                                <input type="date" name="appointment_date" class="form-control" 
+                                       t-att-min="min_date" required/>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Time Slot</label>
+                                <select name="time_slot" class="form-control" required>
+                                    <option value="">Select a time</option>
+                                    <option t-foreach="time_slots" t-as="slot" t-att-value="slot">
+                                        <t t-esc="slot"/>
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Insurance Documents (if applicable)</label>
+                                <input type="file" name="insurance_docs" class="form-control"/>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Notes</label>
+                                <textarea name="notes" class="form-control" rows="3"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Book Appointment</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>

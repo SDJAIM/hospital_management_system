@@ -47,6 +47,11 @@ class Patient(models.Model):
         ('o-', 'O-'),
     ], string='Blood Group')
 
+    has_insurance = fields.Boolean(string="Has Insurance")
+    insurance_provider = fields.Char(string="Insurance Provider")
+    insurance_policy_number = fields.Char(string="Policy Number")
+    insurance_expiry = fields.Date(string="Insurance Expiry Date")
+
     martial_statu = fields.Selection([
         ('single', 'Single'),
         ('married', 'Married'),
