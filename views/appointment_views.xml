@@ -55,10 +55,10 @@
                             <field name="reason"/>
                             <field name="fee"/>
                             <field name="insurance_docs" filename="insurance_number"/>
-                            <field name="insurance_number" attrs="{'invisible': [('insurance_docs', '=', False)]}"/>
+                            <field name="insurance_number" invisible="insurance_docs == False"/>
                         </group>
                         <group>
-                            <field name="secretary_notes" attrs="{'readonly': [('state', '!=', 'pending')]}"/>
+                            <field name="secretary_notes" readonly="state != 'pending'"/>
                         </group>
                       <div class="oe_button_box" name="buttons" style="margin-top: 20px; text-align: center;">
                           <button name="action_go_back"
