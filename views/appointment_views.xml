@@ -87,6 +87,12 @@
             <field name="name">Appointments</field>
             <field name="res_model">hospital.appointment</field>
             <field name="view_mode">calendar,tree,form</field>
+            <field name="view_ids" eval="[
+                (5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('view_appointment_list')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('view_appointment_form')}),
+                (0, 0, {'view_mode': 'calendar', 'view_id': ref('view_appointment_calendar')})
+            ]"/>
         </record>
 
         <!-- Calendar View -->
